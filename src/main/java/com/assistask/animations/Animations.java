@@ -3,6 +3,7 @@ package com.assistask.animations;
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.scene.Node;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class Animations {
@@ -80,7 +81,7 @@ public class Animations {
     
     public static void setFadeFocus(Node n){
         n.focusedProperty().addListener((obs,oldVal,newVal)-> {
-            FadeTransition fade = new FadeTransition(Duration.seconds(0.3),n);
+            FadeTransition fade = new FadeTransition(Duration.seconds(0.5),n);
             fade.setCycleCount(1);
             fade.setAutoReverse(false);
             if(newVal){
@@ -88,9 +89,16 @@ public class Animations {
                 fade.setToValue(1);
             }else{
                 fade.setFromValue(1);
-                fade.setToValue(0.5);
+                fade.setToValue(1);
             }
             fade.play();
         });
+    }
+    
+    public static void fadeWindow(Stage stage){
+        FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.3),stage.getScene().getRoot());
+        fadeIn.setFromValue(0.9);
+        fadeIn.setToValue(1.0);
+        fadeIn.play();
     }
 }

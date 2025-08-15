@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #120907;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assistask.controllers.SignUpController">
+    <stylesheets>
+        <URL value="@styles/logIn.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="138.0" layoutY="17.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="375.0" prefWidth="325.0" style="-fx-spacing: 10;" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="137.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="2.0" prefWidth="325.0" style="-fx-spacing: 10;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="124.0" style="-fx-text-fill: #a0b4e9;" text="Sign up" textAlignment="CENTER" textOverrun="CLIP">
+                     <font>
+                        <Font name="Noto Serif Regular" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox fx:id="fieldBox" prefHeight="232.0" prefWidth="273.0" style="-fx-spacing: 20;">
+               <children>
+                  <TextField fx:id="userNameField" prefHeight="30.0" prefWidth="260.0" promptText="Username" style="-fx-background-color: #344f8b;">
+                     <font>
+                        <Font name="Noto Serif Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="emailField" prefHeight="30.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: #344f8b;">
+                     <font>
+                        <Font name="Noto Serif Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <PasswordField fx:id="passwordField" prefHeight="30.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: #344f8b;">
+                     <font>
+                        <Font name="Noto Serif Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </PasswordField>
+                  <PasswordField fx:id="confirmPasswordField" prefHeight="30.0" prefWidth="250.0" promptText="Confirm password" style="-fx-background-color: #344f8b;">
+                     <font>
+                        <Font name="Noto Serif Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </PasswordField>
+                  <PasswordField fx:id="birthdayField" prefHeight="30.0" prefWidth="250.0" promptText="Birthday YYYY/MM/DD" style="-fx-background-color: #344f8b;">
+                     <font>
+                        <Font name="Noto Serif Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </PasswordField>
+               </children>
+            </VBox>
+            <HBox fx:id="btnBox" alignment="CENTER" prefHeight="61.0" prefWidth="325.0" style="-fx-spacing: 50;">
+               <children>
+                  <Button fx:id="logInBtn" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: #141b3d; -fx-text-fill: #a0b4e9#a0b4e9; -fx-padding: 5 20 5 20;" text="Log in">
+                     <font>
+                        <Font name="Noto Serif Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#signUp" style="-fx-background-color: #6a82e1; -fx-padding: 5 20 5 20; -fx-text-fill: #120907;" text="Sign up">
+                     <font>
+                        <Font name="Noto Serif Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

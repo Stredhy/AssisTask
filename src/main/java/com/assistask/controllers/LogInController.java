@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package com.assistask.controllers;
 
 import java.net.URL;
@@ -13,11 +9,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import com.assistask.animations.Animations;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 /**
- * FXML Controller class
- *
  * @author stredhy
  */
 public class LogInController implements Initializable {
@@ -35,9 +33,6 @@ public class LogInController implements Initializable {
     @FXML
     private HBox btnBox;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         for(Node n: btnBox.getChildren()){
@@ -52,7 +47,13 @@ public class LogInController implements Initializable {
     }
 
     @FXML
-    private void signUp(ActionEvent event) {
+    private void signUp(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/assistask/signUp.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(fxmlLoader.load()));
+        stage.setTitle("Sign up");
+        stage.show();
+        Animations.fadeWindow(stage);
     }
     
     public boolean verifyPassword(String str){

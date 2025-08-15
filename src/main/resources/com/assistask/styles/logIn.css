@@ -12,9 +12,16 @@
  .text-field{
      -fx-border-radius: 5px;
      -fx-background-radius: 5;
+     -fx-text-fill: #a0b4e9;
  }
  
  .text-field:focused{
      -fx-text-fill: #a0b4e9;
      -fx-border-color: #a0b4e9;
+ }
+ 
+ .mainFxmlClass{
+        -fx-background-image: url("../img/bookAssisTask.png");
+        -fx-background-repeat: repeat;
+        -fx-background-size: 1%;
  }
