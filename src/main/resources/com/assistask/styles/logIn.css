@@ -1,0 +1,20 @@
+/*
+    Styles color
+
+    --first: #120907;
+    --second: #141b3d;
+    --third: #344f8b;
+    --fourth: #6a82e1;
+    --fifth: #a0b4e9;
+
+ */
+ 
+ .text-field{
+     -fx-border-radius: 5px;
+     -fx-background-radius: 5;
+ }
+ 
+ .text-field:focused{
+     -fx-text-fill: #a0b4e9;
+     -fx-border-color: #a0b4e9;
+ }

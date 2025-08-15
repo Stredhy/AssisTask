@@ -1,7 +1,8 @@
-module com.assistasks {
+module com.assistask {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.base;
 
-    opens com.assistasks to javafx.fxml;
-    exports com.assistasks;
+    opens com.assistask.controllers to javafx.fxml;
+    exports com.assistask;
 }
