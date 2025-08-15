@@ -11,12 +11,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #120907;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assistask.controllers.SignUpController">
+<AnchorPane id="AnchorPane" style="-fx-background-color: #120907;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assistask.controllers.SignUpController">
     <stylesheets>
         <URL value="@styles/logIn.css" />
     </stylesheets>
    <children>
-      <VBox alignment="CENTER" layoutX="138.0" layoutY="17.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="375.0" prefWidth="325.0" style="-fx-spacing: 10;" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="137.0">
+      <VBox alignment="CENTER" layoutX="138.0" layoutY="17.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="375.0" prefWidth="325.0" style="-fx-spacing: 10;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="17.0">
          <children>
             <HBox alignment="CENTER" prefHeight="2.0" prefWidth="325.0" style="-fx-spacing: 10;">
                <children>

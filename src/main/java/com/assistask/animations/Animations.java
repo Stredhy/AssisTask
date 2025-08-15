@@ -1,8 +1,12 @@
 package com.assistask.animations;
 
 import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
+import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
+import javafx.application.Platform;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -96,9 +100,56 @@ public class Animations {
     }
     
     public static void fadeWindow(Stage stage){
-        FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.3),stage.getScene().getRoot());
-        fadeIn.setFromValue(0.9);
-        fadeIn.setToValue(1.0);
+        Parent root = stage.getScene().getRoot();
+        root.setOpacity(0);
+
+        FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.5), root);
+        fadeIn.setFromValue(0.0);
+        fadeIn.setToValue(1.0); 
+        fadeIn.setInterpolator(Interpolator.EASE_OUT);
         fadeIn.play();
+    }
+    
+    public static void scaleInWindow(Stage stage){
+        Parent root = stage.getScene().getRoot();
+        root.setScaleX(0);
+        root.setScaleY(0);
+        ScaleTransition scale = new ScaleTransition(Duration.seconds(0.3),root);
+        
+        scale.setFromX(0);
+        scale.setFromY(0);
+        
+        scale.setToX(1);
+        scale.setToY(1);
+        
+        scale.setInterpolator(Interpolator.EASE_OUT);
+        
+        scale.play();
+    }
+    
+    public static void scaleOutAndClose(Stage stage){
+        Parent root = stage.getScene().getRoot();
+
+        if (Boolean.TRUE.equals(root.getProperties().get("closing"))) {
+            return;
+        }
+        
+        root.getProperties().put("closing", true);
+        root.setMouseTransparent(true);
+
+        FadeTransition fade = new FadeTransition(Duration.seconds(0.3), root);
+        fade.setFromValue(root.getOpacity());
+        fade.setToValue(0);
+
+        ScaleTransition scale = new ScaleTransition(Duration.seconds(0.3), root);
+        scale.setFromX(root.getScaleX());
+        scale.setFromY(root.getScaleY());
+        scale.setToX(0);
+        scale.setToY(0);
+
+        ParallelTransition pt = new ParallelTransition(fade, scale);
+        pt.setInterpolator(Interpolator.EASE_IN);
+        pt.setOnFinished(e -> stage.close());
+        pt.play();
     }
 }

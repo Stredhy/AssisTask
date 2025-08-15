@@ -18,20 +18,15 @@
         <URL value="@styles/logIn.css" />
     </stylesheets>
    <children>
-      <VBox alignment="CENTER" layoutX="138.0" layoutY="17.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="354.0" prefWidth="325.0" style="-fx-spacing: 20;" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="137.0">
+      <VBox alignment="CENTER" layoutX="138.0" layoutY="17.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="354.0" prefWidth="325.0" style="-fx-spacing: 20;" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="17.0">
          <children>
             <HBox alignment="CENTER" prefHeight="2.0" prefWidth="325.0" style="-fx-spacing: 10;">
                <children>
-                  <Label style="-fx-text-fill: #a0b4e9;" text="Welcome to AssisTask!">
+                  <Label style="-fx-text-fill: #a0b4e9;" text="Log in">
                      <font>
                         <Font name="Noto Serif Regular" size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@img/smileIcon.png" />
-                     </image>
-                  </ImageView>
                </children>
             </HBox>
             <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="48.0" prefWidth="325.0" style="-fx-spacing: 10;">
