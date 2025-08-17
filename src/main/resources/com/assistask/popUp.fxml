@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="172.0" prefWidth="352.0" style="-fx-background-color: #141b3d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assistask.controllers.PopUpController">
+<AnchorPane id="AnchorPane" prefHeight="172.0" prefWidth="352.0" style="-fx-background-color: #141b3d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assistask.controller.PopUpController">
     <stylesheets>
         <URL value="@/com/assistask/styles/popup.css" />
     </stylesheets>

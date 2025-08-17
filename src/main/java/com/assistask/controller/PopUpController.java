@@ -1,6 +1,6 @@
-package com.assistask.controllers;
+package com.assistask.controller;
 
-import com.assistask.animations.Animations;
+import com.assistask.util.Animations;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;

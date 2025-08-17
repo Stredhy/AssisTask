@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" style="-fx-background-color: #120907;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assistask.controllers.SignUpController">
+<AnchorPane id="AnchorPane" style="-fx-background-color: #120907;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assistask.controller.SignUpController">
     <stylesheets>
         <URL value="@styles/logIn.css" />
     </stylesheets>

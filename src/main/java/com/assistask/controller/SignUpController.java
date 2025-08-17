@@ -2,10 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package com.assistask.controllers;
+package com.assistask.controller;
 
-import com.assistask.animations.Animations;
-import static com.assistask.controllers.LogInController.FXML_PATH;
+import com.assistask.util.Animations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,9 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -83,31 +80,5 @@ public class SignUpController implements Initializable {
     @FXML
     private void signUp(ActionEvent event) {
         
-    }
-    
-    private void showMessage(String labelStr, String btnStr) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_PATH + "popUp.fxml"));
-        Parent root = loader.load();
-        PopUpController popUpControl = loader.getController();
-        popUpControl.setLabelText(labelStr);
-        popUpControl.setBtnText(btnStr);
-        Stage popUp = new Stage();
-        Scene scene = new Scene(root);
-        scene.setFill(Color.TRANSPARENT);
-        popUp.initModality(Modality.APPLICATION_MODAL);
-        popUp.setScene(scene);
-        popUp.initStyle(StageStyle.UNDECORATED);
-        popUp.setTitle(labelStr);
-        popUpControl.setStage(popUp);
-        Animations.fadeWindow(popUp);
-        
-        popUp.initStyle(StageStyle.TRANSPARENT);
-        
-        root.setScaleX(0);
-        root.setScaleY(0);
-        
-        popUp.setOnShown(e -> Animations.scaleInWindow(popUp));
-        
-        popUp.show();   
     }
 }
